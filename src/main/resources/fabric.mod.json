@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "visualsmod",
+  "version": "${version}",
+  "name": "Visuals Mod",
+  "description": "Визуалы: HUD, эффекты в бою, круги при прыжке, подсветка существ, свечение.",
+  "authors": [
+    "you"
+  ],
+  "license": "MIT",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "ru.visualsmod.VisualsMod"
+    ],
+    "client": [
+      "ru.visualsmod.VisualsModClient"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.16.0",
+    "minecraft": "~1.21.4",
+    "java": ">=21",
+    "fabric-api": "*"
+  },
+  "mixins": [
+    {
+      "config": "visualsmod.client.mixins.json",
+      "environment": "client"
+    }
+  ]
+}
